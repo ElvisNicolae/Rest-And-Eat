@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Rest-And-Eat/static/css/main.a9f091da.css",
+    "main.js": "/Rest-And-Eat/static/js/main.d3e532d6.js",
+    "static/media/saladmeat.png": "/Rest-And-Eat/static/media/saladmeat.2b7e2f0ce67e9367ec07.png",
+    "static/media/salad.png": "/Rest-And-Eat/static/media/salad.f0febfc23b9abffecc62.png",
+    "static/media/foodplateblack.png": "/Rest-And-Eat/static/media/foodplateblack.8b0192e4e29666ef5ef2.png",
+    "index.html": "/Rest-And-Eat/index.html",
+    "main.a9f091da.css.map": "/Rest-And-Eat/static/css/main.a9f091da.css.map",
+    "main.d3e532d6.js.map": "/Rest-And-Eat/static/js/main.d3e532d6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9f091da.css",
+    "static/js/main.d3e532d6.js"
+  ]
+}
