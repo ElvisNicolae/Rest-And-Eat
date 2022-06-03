@@ -1,5 +1,5 @@
 import {
-  BrowserRouter,
+  HashRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -35,7 +35,7 @@ const client = new ApolloClient({
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ApolloProvider client={client}>
         <Header />
         <Routes>
@@ -45,7 +45,7 @@ const App = () => {
         </Routes>
         <Footer />
       </ApolloProvider>
-   </BrowserRouter>
+   </HashRouter>
   );
 }
 

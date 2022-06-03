@@ -1,7 +1,7 @@
 {
   "name": "restandeat",
   "version": "0.1.0",
-  "homepage": "https://elvisnicolae.github.io/Rest-And-Eat",
+  "homepage": "https://elvisnicolae.github.io/Rest-And-Eat/",
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.6.5",
