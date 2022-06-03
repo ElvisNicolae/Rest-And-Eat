@@ -1,0 +1,41 @@
+@import "../../../sass/global.scss";
+
+.reservation-modal {
+  background-color: rgb(1, 1, 1, 0.31);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservation-modal__content {
+  position: relative;
+  background-color: white;
+  color: $color-secondary-dark;
+  font-size: 1.25rem;
+  max-width: 630px;
+  padding: 2.25rem 1rem;
+  text-align: center;
+  font-weight: bold;
+  line-height: 2.75rem;
+
+  &::first-line {
+    font-size: 2.4rem;
+  }
+}
+
+.reservation-modal__close-modal {
+  position: absolute;
+  right: 15px;
+  top: 0px;
+  cursor: pointer;
+
+  &:hover {
+    color: lighten($color-secondary-dark , 40%)
+  }
+}

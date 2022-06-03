@@ -1,0 +1,50 @@
+@import "../../sass/global.scss";
+
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 120px;
+  margin: auto;
+  border-bottom: solid 1px #F2F3F5;
+  background-color: white;
+  z-index: 10;
+
+  @media (max-width: 570px) {
+    flex-direction: column;
+  } 
+}
+
+.header-logo {
+  @include logo;
+  margin-right: 6rem;
+
+  @media (max-width: 760px) {
+    margin-right: 2rem;
+  } 
+}
+
+.header__list {
+  display: flex;
+}
+
+.header__list-elm {
+  font-family: 'Rubik', sans-serif;
+  font-size: 0.93rem;
+  letter-spacing: 0.5px;
+  margin: 0rem 1.5rem;
+
+  & a {
+    color: rgb(56, 56, 56);
+  }
+
+  @media (max-width: 320px) {
+    margin: 0rem .45rem;
+    font-size: 0.88rem;
+  }
+}
+

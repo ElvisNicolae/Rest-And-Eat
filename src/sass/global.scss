@@ -1,0 +1,124 @@
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'rubik', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+}
+
+body {
+  padding-top: 120px; // header height
+  padding-bottom: 120px; // footer height
+  min-height: 100vh;
+  position: relative;
+}
+
+.btn {
+  border: none;
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: darken($color-primary-light, 3%);
+
+  &:hover {
+    background-color: darken($color-primary-light, 7%);
+  }
+}
+
+.btn-secondary {
+  background-color: $color-light-gray;
+
+  &:hover {
+    background-color: darken($color-light-gray, 4%);
+  }
+}
+
+@mixin logo {
+  max-width: 140px;
+  position: relative;
+  bottom: 8px;
+}
+
+@mixin container {
+  max-width: 1125px;
+  margin: auto;
+  padding: 0rem 2.5rem;
+
+  @media (max-width: 1400px) {
+    max-width: 1250px;
+  }
+
+  @media (max-width: 580px) {
+    padding: 0rem 1.5rem;
+  }
+}
+
+@mixin heading {
+  color: $color-secondary-dark;
+  font-weight: 700;
+}
+
+@mixin dish-img {
+  width: inherit;
+  height: 310px;
+  overflow: hidden;
+
+  @media (max-width: 1130px) {
+    height: 270px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: all 0.25s ease-in-out;
+  }
+
+  &:hover {
+    img {
+      transform: scale(104%);
+    }
+  }
+}
+
+@mixin dish-name-price {
+  display: flex;
+  font-weight: 500;
+  margin-bottom: .75rem;
+  border-bottom: 1px solid rgb(234, 234, 234);
+}
+
+@mixin dish-name {
+  background-color: #F2F3F8;
+  width: 100%;
+  font-size: 1.1rem;
+  padding: .9rem .9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap
+}
+
+@mixin dish-price {
+  background-color: lighten($color-primary, 5%);
+  font-size: 1.2rem;
+  padding: .9rem .65rem;
+  letter-spacing: 1px;
+}
+
+@mixin dish-ingredients {
+  color: $color-secondary-light;
+  font-size: 0.95rem;
+}

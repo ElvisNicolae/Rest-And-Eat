@@ -1,0 +1,386 @@
+@import "../../sass/global.scss";
+
+$pop-dish-first-media-query: 1250px;
+$pop-dish-second-media-query: 1000px;
+$pop-dish-third-media-query: 865px;
+$pop-dish-fourth-media-query: 320px; // galaxy fold
+
+.home {
+  position: relative;
+  overflow: hidden;
+  padding-top: 2rem;
+
+  @media (max-height: 700px) {
+    padding-top: 1rem;
+  }
+
+  &::after {
+    content: '';
+    background-color: $color-background-light;
+    position: absolute;
+    top: -715px;
+    left: 23%;
+    width: 700px;
+    height: 3000px;
+    z-index: -20;
+    transform: rotate(54deg);
+  }
+}
+
+.home-header {
+  margin-bottom: 10rem;
+}
+
+.home-header__container {
+  @include container;
+  display: flex;
+  align-items: center;
+  min-height: 700px;
+  
+  @media (max-height: 700px) {
+    min-height: 490px;
+  }
+
+  @media (max-width: 1160px) {
+    flex-direction: column;
+  } 
+
+  @media (max-width: 440px) {
+    padding: 0rem .5rem;  
+  }
+}
+
+.home-header__text-container {
+
+  @media (max-width: 1160px) {
+    text-align: center;
+  }
+}
+
+
+.home-header__heading {
+  @include heading;
+  font-size: 3.93rem;
+  line-height: 4.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+
+  @media (max-width: 1160px) {
+    margin: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  @media (max-width: 750px) {
+    font-size: 3rem;
+    line-height: 3.25rem;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 2.6rem;
+    line-height: 2.65rem;
+  }
+
+  
+  @media (max-width: 320px) { 
+    font-size: 2rem;
+    line-height: 2.1rem;
+  }
+}
+
+.home-header__paragraph {
+  color: $color-secondary;
+  margin-bottom: 1.5rem;
+}
+
+.home-header__btn {
+  margin-right: 3rem;
+
+  @media (max-width: 320px) { 
+    margin: 0rem auto 1.5rem;
+  }
+}
+
+.home-header__about-us {
+  color: $color-secondary-dark;
+
+  @media (max-width: 320px) { 
+    display: block;
+    margin-bottom: .65rem;
+  }
+}
+
+.home-header__imgs {
+  max-width: 560px;
+  position: relative;
+  left: 90px;
+  top: 35px;
+
+  @media (max-width: 1370px) {
+    left: 30px;
+  }
+
+  @media (max-width: 1160px) {
+    left: 20px;
+
+    .home-header__img {
+      max-width: 230px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    left: 50px;
+
+    .home-header__img {
+      max-width: 190px;
+    
+      &:nth-child(2) {
+        top: 185px;
+      }
+    }
+  }
+
+  @media (max-width: 520px) {
+    left: 0px;
+  }
+
+  @media (max-width: 440px) {
+    .home-header__img {
+      max-width: 150px;
+
+      &:nth-child(2) {
+        top: 155px;
+        left: 27px;
+      }
+    }
+  }
+
+  @media (max-width: 320px) {
+    left: -25px;
+
+    .home-header__img {
+      max-width: 130px;
+
+      &:nth-child(2) {
+        top: 135px;
+        left: 27px;
+      }
+    }
+  }
+}
+
+.home-header__img {
+  max-width: 270px;
+  position: relative;
+  animation: plates 4s ease-in-out infinite;
+  
+  &:nth-child(1) {      // salad with meat
+    left: 125px;  
+    animation-duration: 3.5s;
+  }
+
+  &:nth-child(2) {      // salad 
+    top: 210px;
+    left: 20px;
+    animation-delay: 1s;
+  }
+
+  &:nth-child(3) {      // black plate
+    bottom: 37px;
+    left: 25px;
+    animation-delay: 0.35s;
+  }
+}
+
+
+
+
+
+.pop-dishes {
+  @include container;
+  position: relative;
+  
+  @media (max-width: $pop-dish-first-media-query) {
+    padding: 0rem 1rem;
+  }
+
+  &::after {
+    content: '';
+    background-color: $color-background-light;
+    position: absolute;
+    top: -1150px;
+    left: 23%;
+    width: 800px;
+    height: 3000px;
+    z-index: -20;
+    transform: rotate(95deg);
+  }
+}
+
+.pop-dishes__heading {
+  @include heading;
+  font-size: 2.6rem;
+  margin-bottom: 1.75rem;
+
+  @media (max-width: $pop-dish-first-media-query) { 
+    text-align: center;
+  }
+
+  @media (max-width: $pop-dish-second-media-query) { 
+    font-size: 2.45rem;
+    margin-bottom: 1.25rem;
+  }
+
+  
+  @media (max-width: $pop-dish-fourth-media-query) { 
+    font-size: 2rem;
+  }
+}
+
+.pop-dishes__paragraph {
+  color: $color-secondary-light;
+  max-width: 270px;
+  margin-bottom: 4.75rem;
+  font-size: 0.9rem;
+
+  @media (max-width: $pop-dish-first-media-query) { 
+    text-align: center;
+    margin: auto;
+    margin-bottom: 2.75rem;
+  }
+
+  @media (max-width: $pop-dish-second-media-query) { 
+    margin-bottom: 1.9rem;
+  }
+}
+
+
+
+.pop-dishes__dish-list {
+  display: flex;
+  margin-bottom: 3.5rem;
+
+  @media (max-width: $pop-dish-first-media-query) { 
+    justify-content: center;
+  }
+
+  @media (max-width: $pop-dish-third-media-query) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.pop-dishes__dish {
+  width: 330px;
+  margin-right: 3rem;
+
+  @media (max-width: $pop-dish-first-media-query) {
+    width: 280px;
+    margin: 0rem 1.25rem;
+
+    .pop-dishes__dish-img {
+      height: 250px;
+    }
+  }
+
+  @media (max-width: $pop-dish-second-media-query) {
+    width: 240px;
+    margin: 0rem 1rem;
+
+    .pop-dishes__dish-img {
+      height: 210px;
+    }
+  }
+
+  @media (max-width: $pop-dish-third-media-query) {
+    width: 350px;
+    margin: 0rem;
+    margin-bottom: 2rem;
+
+    .pop-dishes__dish-img {
+      height: 310px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    width: 320px;
+
+    .pop-dishes__dish-img {
+      height: 290px;
+    }
+  }
+
+  @media (max-width: $pop-dish-fourth-media-query) {
+    width: 240px;
+
+    .pop-dishes__dish-img {
+      height: 210px;
+    }
+  }
+}
+
+.pop-dishes__dish-img {
+  @include dish-img;
+}
+
+.pop-dishes__dish-name-price {
+  @include dish-name-price;
+}
+
+.pop-dishes__dish-name {
+  @include dish-name;
+
+  @media (max-width: $pop-dish-second-media-query) { 
+    font-size: 1rem;
+  }
+}
+
+.pop-dishes__dish-price {
+  @include dish-price;
+  
+  @media (max-width: $pop-dish-second-media-query) { 
+    font-size: 1rem;
+  }
+}
+
+.pop-dishes__dish-ingredients {
+  @include dish-ingredients;
+
+  @media (max-width: $pop-dish-second-media-query) { 
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: $pop-dish-third-media-query) { 
+    font-size: 0.95rem;
+  }
+}
+
+
+.btn-make-reservation {
+  display: block;
+  margin: auto;
+  margin-bottom: 4rem;
+
+  @media (max-width: $pop-dish-second-media-query) { 
+    padding: .85rem 1.8rem !important;
+  }
+}
+
+
+
+
+
+
+
+@keyframes plates {
+  0% {
+    transform: scale(100%);
+  }
+
+  50% {
+    transform: scale(108%);
+  }
+
+  100% {
+    transform: scale(100%);
+  }
+}

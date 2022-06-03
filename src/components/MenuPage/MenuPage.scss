@@ -1,0 +1,155 @@
+@import "../../sass/global.scss";
+
+$menu-first-media-query: 1210px;
+$menu-second-media-query: 980px;
+$menu-third-media-query: 740px;
+$menu-fourth-media-query: 570px;
+$menu-fifth-media-query: 320px;
+
+
+.menu {
+    @include container;
+    padding-top: 3.5rem;
+
+    @media (max-width: $menu-first-media-query) {  
+        padding: 0rem 1.75rem;
+        padding-top: 2rem;
+        max-width: fit-content;
+    }
+}
+
+
+
+
+.menu-filters {
+    display: flex;
+    margin-bottom: 3.5rem;
+
+    @media (max-width: $menu-fourth-media-query) {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.menu-filters__filter {
+    padding: 1.1rem 1.45rem;
+    background-color: $color-light-gray;
+    margin-right: 1rem;
+    cursor: pointer;
+    user-select: none;
+    color: $color-secondary-dark;
+
+    &:hover {
+        background-color: darken($color-light-gray, 4%);
+    }
+
+    @media (max-width: $menu-second-media-query) {
+        padding: 0.7rem 1rem;
+        font-size: 0.93rem;
+    }
+
+    @media (max-width: $menu-fourth-media-query) {
+        width: 100%;
+    }
+}
+
+.menu-filters__filter--selected {
+    background-color: $color-primary-light;
+
+    &:hover {
+        background-color: darken($color-primary-light, 4%);
+    }
+}
+
+
+
+
+
+
+.menu-dish-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+    grid-gap: 2rem;
+
+    @media (max-width: $menu-first-media-query) {
+        grid-template-columns: auto auto auto;
+    }
+
+    @media (max-width: $menu-third-media-query) {
+        grid-template-columns: auto auto;
+    }
+
+    @media (max-width: $menu-fourth-media-query) {
+        display: block;
+    }
+}
+
+.menu-dish {
+    width: 260px;
+    margin-bottom: 3rem;
+
+    @media (max-width: $menu-first-media-query) {
+        width: 280px;
+    }
+
+    @media (max-width: $menu-second-media-query) {
+        width: 200px;
+        margin-bottom: 2rem;
+    }
+
+    @media (max-width: $menu-fourth-media-query) {
+        width: 280px;
+        margin-bottom: 4rem;
+    }
+
+    @media (max-width: $menu-fifth-media-query) {
+        width: 220px;
+    }
+}
+
+.menu-dish__img {
+    @include dish-img;
+    height: 230px;
+
+    @media (max-width: $menu-first-media-query) {
+        height: 260px;
+    }
+
+    @media (max-width: $menu-second-media-query) {
+        height: 180px;
+    }
+
+    @media (max-width: $menu-fourth-media-query) {
+        height: 260px;
+    }
+
+    @media (max-width: $menu-fifth-media-query) {
+        height: 200px;
+    }
+}
+
+.menu-dish__name-price {
+    @include dish-name-price;
+}
+
+.menu-dish__name {
+    @include dish-name;
+    padding: .75rem .9rem;
+    font-size: 1.03rem;
+    position: relative;
+    top: 2px;
+}
+
+.menu-dish__price {
+    @include dish-price;
+    padding: .75rem .55rem;
+
+    @media (max-width: $menu-second-media-query) {
+        font-size: 1.05rem;
+    }
+}
+
+.menu-dish__ingredients {
+    @include dish-ingredients;
+}
